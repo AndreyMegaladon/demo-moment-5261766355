@@ -1,0 +1,252 @@
+<DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню | Момент Львів</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-400 font-serif">МОМЕНТ</a>
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-amber-400 transition">Головна</a>
+                    <a href="about.html" class="hover:text-amber-400 transition">Про нас</a>
+                    <a href="services.html" class="text-amber-400 transition">Меню</a>
+                    <a href="gallery.html" class="hover:text-amber-400 transition">Галерея</a>
+                    <a href="contacts.html" class="hover:text-amber-400 transition">Контакти</a>
+                    <a href="booking.html" class="bg-gradient-to-r from-amber-500 to-amber-600 text-black px-5 py-2.5 rounded-full font-semibold hover:from-amber-400 hover:to-amber-500 transition shadow-lg shadow-amber-500/20">Забронивати</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-neutral-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-neutral-300 hover:text-white">Головна</a>
+            <a href="about.html" class="block py-2 text-neutral-300 hover:text-white">Про нас</a>
+            <a href="services.html" class="block py-2 text-amber-400 font-medium">Меню</a>
+            <a href="gallery.html" class="block py-2 text-neutral-300 hover:text-white">Галерея</a>
+            <a href="contacts.html" class="block py-2 text-neutral-300 hover:text-white">Контакти</a>
+            <a href="booking.html" class="block text-center mt-3 bg-gradient-to-r from-amber-500 to-amber-600 text-black py-2.5 rounded-lg font-semibold">Забронивати</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-20 bg-neutral-900/50 border-b border-neutral-800 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Наше меню</h1>
+            <p class="text-neutral-400 text-lg">Сніданки, авторські десерти, страви європейської кухні та фірмові коктейлі</p>
+        </div>
+    </header>
+
+    <!-- Menu Container -->
+    <section class="py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <!-- Category 1: Breakfasts -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-400 mb-8 border-b border-neutral-800 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-mug-hot"></i> Сніданки (подаються до 16:00)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Фірмові ніжні сирники</h3>
+                            <p class="text-neutral-400 text-sm">Подаються зі свіжими ягодами, сметаною та ягідним соусом.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">194 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Великий сніданок з омлетом</h3>
+                            <p class="text-neutral-400 text-sm">Пишний омлет, тости, авокадо, зелень та мікс салат.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">234 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Деруни з індичкою</h3>
+                            <p class="text-neutral-400 text-sm">Хрусткі картопляні деруни з ніжним м'ясом індички та соусом.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">220 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Хрусткий круасан з лососем</h3>
+                            <p class="text-neutral-400 text-sm">Свіжоспечений круасан слабосоленим лососем та крем-сиром.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">215 ₴</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Desserts -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-400 mb-8 border-b border-neutral-800 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-cake-candles"></i> Десерти та кондитерські вироби
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Фісташково-малиновий торт</h3>
+                            <p class="text-neutral-400 text-sm">Ніжний бісквіт із фісташковим кремом та малиною.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">210 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Карамельний чизкейк</h3>
+                            <p class="text-neutral-400 text-sm">Вершковий чизкейк із солоною карамеллю.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">180 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Маково-смородиновий еклер</h3>
+                            <p class="text-neutral-400 text-sm">Класичний заварний еклер з маком та смородиною.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">140 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Лимонний мус</h3>
+                            <p class="text-neutral-400 text-sm">Освіжаючий десерт із легкою кислинкою цитрусових.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">155 ₴</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Mains -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-400 mb-8 border-b border-neutral-800 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-utensils"></i> Основні страви та дичина
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Паста з уткою та лисичками</h3>
+                            <p class="text-neutral-400 text-sm">Домашня паста з ніжним м'ясом качки та лисичками.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">320 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Паста з креветками</h3>
+                            <p class="text-neutral-400 text-sm">Тигрові креветки, вершковий соус та зелень.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">340 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Ковбаски з оленини</h3>
+                            <p class="text-neutral-400 text-sm">Дикі ковбаски з м'яса оленини з гарніром.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">380 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Ковбаски з м'яса кабана</h3>
+                            <p class="text-neutral-400 text-sm">Пікантні ковбаски з дичини з соусом.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">370 ₴</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Bar & Cocktails -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-400 mb-8 border-b border-neutral-800 pb-3 flex items-center gap-3">
+                    <i class="fa-solid fa-martini-glass"></i> Коктейлі та барне меню
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Коктейль Porn Star Martini</h3>
+                            <p class="text-neutral-400 text-sm">Маракуйя, ваніль, ігристе.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">260 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Кривава Мері із часником</h3>
+                            <p class="text-neutral-400 text-sm">Авторська пікантна подача.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">240 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Матча лате</h3>
+                            <p class="text-neutral-400 text-sm">Японська зелена матча на рослинному або звичайному молоці.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">130 ₴</span>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Односолодовий віскі / Вино</h3>
+                            <p class="text-neutral-400 text-sm">Широкий вибір напоїв з барної карти.</p>
+                        </div>
+                        <span class="text-amber-400 font-bold text-lg ml-4">190 ₴+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-8">
+                <a href="booking.html" class="bg-gradient-to-r from-amber-500 to-amber-600 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-400 hover:to-amber-500 transition shadow-xl">
+                    Забронивати столик та скуштувати
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 border-t border-neutral-800 py-12 text-neutral-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="text-white text-xl font-serif font-bold mb-4">МОМЕНТ</h3>
+                <p class="text-sm leading-relaxed mb-4">
+                    Кондитерська та коктейль-бар у самому серці Львова. Живи тут і зараз!
+                </p>
+                <p class="text-sm text-amber-400 font-semibold">+38 (096) 887 99 88</p>
+            </div>
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 font-serif">Години роботи</h3>
+                <p class="text-sm mb-2">Понеділок — Неділя</p>
+                <p class="text-sm text-white font-medium">08:00 — 23:00 щодня</p>
+            </div>
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 font-serif">Ми у соцмережах</h3>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/moment_lviv/" target="_blank" class="w-10 h-10 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center text-white hover:bg-amber-500 hover:text-black transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%8C%D1%81%D1%8C%D0%BA%D0%B0-%D0%9A%D0%BE%D0%BA%D1%82%D0%B5%D0%B9%D0%BB%D1%8C-%D0%B1%D0%B0%D1%80-%D0%9C%D0%BE%D0%BC%D0%B5%D0%BD%D1%82/100083162629676/" target="_blank" class="w-10 h-10 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center text-white hover:bg-amber-500 hover:text-black transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-neutral-900 pt-6 text-center text-xs text-neutral-600">
+            &copy; 2026 Момент Кондитерська & Коктейль-бар. Всі права захищено.
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
