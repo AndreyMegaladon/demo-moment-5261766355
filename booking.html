@@ -1,0 +1,176 @@
+<DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання столика | Момент Львів</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-bold tracking-wider text-amber-400 font-serif">МОМЕНТ</a>
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-amber-400 transition">Головна</a>
+                    <a href="about.html" class="hover:text-amber-400 transition">Про нас</a>
+                    <a href="services.html" class="hover:text-amber-400 transition">Меню</a>
+                    <a href="gallery.html" class="hover:text-amber-400 transition">Галерея</a>
+                    <a href="contacts.html" class="hover:text-amber-400 transition">Контакти</a>
+                    <a href="booking.html" class="bg-gradient-to-r from-amber-500 to-amber-600 text-black px-5 py-2.5 rounded-full font-semibold hover:from-amber-400 hover:to-amber-500 transition shadow-lg shadow-amber-500/20">Забронивати</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-neutral-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-neutral-300 hover:text-white">Головна</a>
+            <a href="about.html" class="block py-2 text-neutral-300 hover:text-white">Про нас</a>
+            <a href="services.html" class="block py-2 text-neutral-300 hover:text-white">Меню</a>
+            <a href="gallery.html" class="block py-2 text-neutral-300 hover:text-white">Галерея</a>
+            <a href="contacts.html" class="block py-2 text-neutral-300 hover:text-white">Контакти</a>
+            <a href="booking.html" class="block text-center mt-3 bg-gradient-to-r from-amber-500 to-amber-600 text-black py-2.5 rounded-lg font-semibold">Забронивати</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-16 bg-neutral-900/50 border-b border-neutral-800 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-3">Бронювання столика</h1>
+            <p class="text-neutral-400 text-lg">Забронюйте своє місце у нас на Фурманській, 17 у Львові швидко та зручно</p>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+                <form action="https://formsubmit.co/momentlviv@gmail.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_subject" value="Нове бронювання столика з сайту Момент!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-300 mb-2">Ваше ім'я *</label>
+                            <input type="text" name="name" required class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="Олександр Петренко">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-300 mb-2">Номер телефону *</label>
+                            <input type="tel" name="phone" required class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="+380 (96) 000-00-00">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-300 mb-2">Email</label>
+                            <input type="email" name="email" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="example@gmail.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-300 mb-2">Кількість гостей *</label>
+                            <select name="guests" required class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                                <option value="1 гость">1 гість</option>
+                                <option value="2 гості" selected>2 гості</option>
+                                <option value="3 гості">3 гості</option>
+                                <option value="4 гості">4 гості</option>
+                                <option value="5-8 гостей">5-8 гостей (компанія)</option>
+                                <option value="Більше 8 гостей">Більше 8 гостей (бенкет)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-300 mb-2">Дата бронювання *</label>
+                            <input type="date" name="date" required class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-neutral-300 mb-2">Час *</label>
+                            <select name="time" required class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                                <option value="09:00">09:00 (Сніданок)</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00 (Обід)</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00 (Вечір / Бар)</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-neutral-300 mb-2">Послуга / Формат</label>
+                        <select name="service" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                            <option value="Кондитерська та кава">Кондитерська та кава</option>
+                            <option value="Сніданок (до 16:00)">Сніданок (до 16:00)</option>
+                            <option value="Коктейль-бар (вечір)">Коктейль-бар (вечір)</option>
+                            <option value="Основне меню / Обід">Основне меню / Обід</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-neutral-300 mb-2">Коментар або побажання</label>
+                        <textarea name="comment" rows="3" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="Чи будемо з домашнім улюбленцем, чи є особливі побажання..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold py-4 rounded-xl hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/20 text-lg">
+                        Підтвердити бронювання столика
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 border-t border-neutral-800 py-12 text-neutral-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="text-white text-xl font-serif font-bold mb-4">МОМЕНТ</h3>
+                <p class="text-sm leading-relaxed mb-4">
+                    Кондитерська та коктейль-бар у самому серці Львова. Живи тут і зараз!
+                </p>
+                <p class="text-sm text-amber-400 font-semibold">+38 (096) 887 99 88</p>
+            </div>
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 font-serif">Години роботи</h3>
+                <p class="text-sm mb-2">Понеділок — Неділя</p>
+                <p class="text-sm text-white font-medium">08:00 — 23:00 щодня</p>
+            </div>
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4 font-serif">Ми у соцмережах</h3>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/moment_lviv/" target="_blank" class="w-10 h-10 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center text-white hover:bg-amber-500 hover:text-black transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%8C%D1%81%D1%8C%D0%BA%D0%B0-%D0%9A%D0%BE%D0%BA%D1%82%D0%B5%D0%B9%D0%BB%D1%8C-%D0%B1%D0%B0%D1%80-%D0%9C%D0%BE%D0%BC%D0%B5%D0%BD%D1%82/100083162629676/" target="_blank" class="w-10 h-10 bg-neutral-900 border border-neutral-800 rounded-full flex items-center justify-center text-white hover:bg-amber-500 hover:text-black transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-neutral-900 pt-6 text-center text-xs text-neutral-600">
+            &copy; 2026 Момент Кондитерська & Коктейль-бар. Всі права захищено.
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
